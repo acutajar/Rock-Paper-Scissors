@@ -46,9 +46,9 @@ function game(rounds) {
     playerScore = 0;
     // get input from the user for their play
         //ensure they enter some variation of rock, paper, or scissors
-    let keepGoing = true;
-    let playerSelection = "";
     for (let i = 1; i<=rounds; i++) {
+        let keepGoing = true;
+        let playerSelection = "";
         while (keepGoing) {
             playerSelection = prompt("Please enter your play: ").toUpperCase();
             if (playerSelection == "ROCK" || playerSelection == "PAPER" || playerSelection == "SCISSORS") {
@@ -60,9 +60,8 @@ function game(rounds) {
         // feed those to playRound()
         console.log("player played: " + playerSelection);
         console.log("computer played: " + computerSelection);
-        console.log(playRound(playerSelection, computerSelection) + ". Current score is Player: " + playerScore + " Computer: " + computerScore);
-        playerSelection = "";
-        keepGoing = true;
+        console.log(playRound(playerSelection, computerSelection) + ". Current score is Player: " +
+                playerScore + " Computer: " + computerScore);
     }
     // report the final score and the overall winner
     if (playerScore == computerScore) {
@@ -74,5 +73,5 @@ function game(rounds) {
     }
 } 
 
-(game(1))
+(game(3))
 
